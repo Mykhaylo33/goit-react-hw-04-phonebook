@@ -1,0 +1,33 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.name {
+  margin-right: 10px;
+}
+
+.separator {
+  margin-right: 10px;
+}
+
+.number {
+  margin-right: 10px;
+  color: gray;
+}
+
+.button {
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: #ced7d8;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ff3b4b;
+}
