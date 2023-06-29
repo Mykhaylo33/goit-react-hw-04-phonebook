@@ -8,7 +8,7 @@ import {
   ContactsButton,
 } from './ContactList.styled';
 
-const ContactList = ({ contacts, onDeteleContact }) => {
+const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactsList>
       {contacts.map(contact => {
@@ -19,7 +19,7 @@ const ContactList = ({ contacts, onDeteleContact }) => {
             </ContactsName>
             <ContactsButton
               type="button"
-              onClick={() => onDeteleContact(contact.id)}
+              onClick={() => onDeleteContact(contact.id)}
             >
               <span>Delete</span>
             </ContactsButton>
@@ -32,7 +32,7 @@ const ContactList = ({ contacts, onDeteleContact }) => {
 
 ContactList.propTypes = {
   contacts: PropTypes.array,
-  onDeteleContact: PropTypes.func,
+  onDeleteContact: PropTypes.func,
 };
 
 export default ContactList;
