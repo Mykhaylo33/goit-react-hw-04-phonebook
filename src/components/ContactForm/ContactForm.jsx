@@ -8,6 +8,10 @@ function ContactForm({ onSubmit }) {
 
   const handleSubmit = event => {
     event.preventDefault();
+    if (number.trim() === '') {
+      alert('Please enter a phone number'); // Повідомлення про обов'язковість заповнення поля номера
+      return;
+    }
     onSubmit({ name, number });
     resetForm();
   };
@@ -39,7 +43,7 @@ function ContactForm({ onSubmit }) {
           type="text"
           name="name"
           // pattern="^[a-zA-Zа-яА-Я]+([' -]?[a-zA-Zа-яА-Я]+)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          title="Please enter a Name"
           required
           value={name}
           onChange={handleChange}
@@ -52,6 +56,8 @@ function ContactForm({ onSubmit }) {
           type="text"
           value={number}
           name="number"
+          required
+          title="Please enter a phone number"
           onChange={handleChange}
         />
       </FormLabel>
